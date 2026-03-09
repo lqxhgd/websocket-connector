@@ -1,0 +1,29 @@
+{
+  "name": "@openclaw/websocket-connector",
+  "version": "0.1.0",
+  "description": "OpenClaw 通用 WebSocket 插件，任意 Web 项目接入即可与 OpenClaw 通信",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx watch src/index.ts"
+  },
+  "openclaw": {
+    "extensions": ["./src/index.ts"],
+    "channels": ["websocket-connector"],
+    "installDependencies": true
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/ws": "^8.5.13",
+    "@types/node": "^20.17.0",
+    "@types/uuid": "^9.0.8",
+    "tsx": "^4.19.0"
+  },
+  "license": "MIT"
+}

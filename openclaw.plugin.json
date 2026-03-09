@@ -1,0 +1,34 @@
+{
+  "id": "websocket-connector",
+  "name": "WebSocket Connector",
+  "description": "通用 WebSocket 插件，让任意 Web 项目通过 WebSocket 与 OpenClaw 通信，支持对话、文件传输、会话管理和任务管理",
+  "version": "0.1.0",
+  "author": "openclaw-plugin",
+  "configSchema": {
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否启用插件"
+    },
+    "port": {
+      "type": "number",
+      "default": 18800,
+      "description": "WebSocket 服务监听端口"
+    },
+    "authToken": {
+      "type": "string",
+      "default": "",
+      "description": "客户端连接认证 Token（为空则不校验）"
+    },
+    "sessionTimeout": {
+      "type": "number",
+      "default": 1800000,
+      "description": "会话超时时间（毫秒），默认 30 分钟"
+    },
+    "maxFileSize": {
+      "type": "number",
+      "default": 20971520,
+      "description": "单文件最大大小（字节），默认 20MB"
+    }
+  }
+}
