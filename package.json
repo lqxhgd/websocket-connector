@@ -1,9 +1,26 @@
 {
-  "name": "@openclaw/websocket-connector",
+  "name": "openclaw-websocket-connector",
   "version": "0.1.0",
-  "description": "OpenClaw 通用 WebSocket 插件，任意 Web 项目接入即可与 OpenClaw 通信",
+  "description": "OpenClaw universal WebSocket plugin - connect any web app to OpenClaw via WebSocket",
   "main": "src/index.ts",
   "type": "module",
+  "keywords": [
+    "openclaw",
+    "websocket",
+    "plugin",
+    "connector",
+    "ai",
+    "chat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lqxhgd/websocket-connector.git"
+  },
+  "homepage": "https://github.com/lqxhgd/websocket-connector#readme",
+  "bugs": {
+    "url": "https://github.com/lqxhgd/websocket-connector/issues"
+  },
+  "author": "lqxhgd",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
@@ -11,8 +28,14 @@
   },
   "openclaw": {
     "extensions": ["./src/index.ts"],
-    "channels": ["websocket-connector"],
-    "installDependencies": true
+    "channel": {
+      "id": "websocket-connector",
+      "label": "WebSocket Connector",
+      "order": 50
+    },
+    "install": {
+      "npmSpec": "openclaw-websocket-connector"
+    }
   },
   "dependencies": {
     "ws": "^8.18.0",

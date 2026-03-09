@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test/
+assect/
+.git/
+.gitignore
+*.md
+!README.md
+tsconfig.json
