@@ -1,5 +1,5 @@
 {
-  "name": "openclaw-websocket-connector",
+  "name": "websocket-connector",
   "version": "0.1.0",
   "description": "OpenClaw universal WebSocket plugin - connect any web app to OpenClaw via WebSocket",
   "main": "src/index.ts",
@@ -34,7 +34,7 @@
       "order": 50
     },
     "install": {
-      "npmSpec": "openclaw-websocket-connector"
+      "npmSpec": "websocket-connector"
     }
   },
   "dependencies": {
